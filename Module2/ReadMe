@@ -1,0 +1,1 @@
+This chapter introduces the fundamentals of regular expressions under the umbrella of Python. You will learn by example how to develop regular expressions for dealing with street addresses, Roman numerals, phone numbers, and dates. Unlike Module 1, the text and Python code are all included in one JuPyteR Notebook file, as shown below.
