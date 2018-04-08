@@ -1,0 +1,45 @@
+# compare two list, the elements in the list1 are also in the list2, if yes, return True,else return False
+
+
+# test the letters of the word are in the tiles
+# myTiles: defined list which cantains many letters
+def isInTiles(userInput):
+	inputTiles = list(userInput.upper())
+	b = copy.deepcopy(myTiles)
+	#print(len(inputTiles))
+	for i in range(len(inputTiles)):
+		#print(i)
+		if inputTiles[i] in b:
+			b.remove(inputTiles[i])
+			#print(b)
+			if i == (len(inputTiles)-1):
+				return True
+		else:
+			return False
+
+
+
+
+
+# check the word is made by tiles or not
+def isInTiles(lst1,lst2):
+	d1 = {}
+	for i in lst1:
+		if i in d1:
+			d1[i] += 1
+		else:
+			d1[i] = 1
+	d2 = {}
+	for i in lst2:
+		if i in d2:
+			d2[i] += 1
+		else:
+			d2[i] = 1
+	print(d1,d2)
+	for key, value in d2.items():
+		if key not in d1 or value > d1[key]:
+			print('no')
+			return False
+	print('yes')
+	return True
+
